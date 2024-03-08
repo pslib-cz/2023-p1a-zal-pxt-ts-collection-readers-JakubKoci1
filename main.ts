@@ -19,7 +19,20 @@ let ctenari: Array<Ctenar> = [
  počtem přečtených knih, zvolte libovolnou 
  z nich.
 */
-let knihomol: Ctenar; //Například: { jmeno: "Anna", pocetknih: 7 }
+let pocetKnih:number = 0
+let pocetKnihhighest: number = 0
+let radek:number = 0
+let name:string
+for (let i = 0; i < 4; i++) {
+    pocetKnih = ctenari[radek].pocetknih
+    if(pocetKnih > pocetKnihhighest) {
+        name = ctenari[radek].jmeno
+        pocetKnihhighest = pocetKnih
+    }
+    radek += 1
+}
+let knihomol: Ctenar
 
+knihomol = {jmeno:name,pocetknih:pocetKnihhighest}
 
 console.log(knihomol)
